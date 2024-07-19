@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Kod Oluşturma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        #controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+        input[type="text"], input[type="color"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #generateButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #generateButton:hover {
+            background-color: #0056b3;
+        }
+        #qrcode {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 5px solid #007bff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        #qrcode:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 600px) {
+            input[type="text"], input[type="color"], #generateButton {
+                font-size: 14px;
+                padding: 8px;
+            }
+            #generateButton {
+                padding: 8px 16px;
+            }
+            #qrcode {
+                width: 80%;
+                padding: 10px;
+                border-width: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <input type="text" id="textInput" placeholder="QR Kod İçeriği">
+        <input type="color" id="colorInput" value="#000000" placeholder="QR Kod Rengini Seçin" title="QR Kod Rengini Seçin">
+        <button id="generateButton">QR Kod Oluştur</button>
+    </div>
+    <div id="qrcode"></div>
+
+    <!-- QRCode.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
