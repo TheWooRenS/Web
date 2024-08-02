@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brave Page</title>
+    <link rel="shortcut icon" href="brave.ico" type="image/x-icon">
+    <style>
+        body{
+            margin: 0;
+
+        }
+        html{
+            scroll-behavior: smooth
+        }
+        a{
+            text-decoration: none;
+
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans+Narrow:wght@400;700&display=swap');
+        .card{
+            padding-top: 4%;
+            position: sticky;
+            width: 100%;
+            height: 100vh;
+            margin-right: 35px;
+            margin-left: 35px;
+            margin-top: 45px;
+            top: 0;
+        }
+        section{
+            display: flex;
+            justify-content: space-between;
+        }
+        .text{
+            margin-top: 15px;
+            font-size: 45px;
+            border: 5px black solid;
+            padding: 2%;
+            border-radius: 25px;
+            font-family: "PT Sans Narrow", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            height: 100%;
+        }
+        .downloadcard{
+            position: sticky;
+            margin-right: 35px;
+            margin-left: 35px;
+            margin-top: 45px;
+            top: 0;
+        }
+        button:hover{
+            box-shadow: 20px 15px 25px black;
+            cursor: pointer;
+        }
+        .downloadcard button{
+            transition: 1s;
+            border: 1px black solid;
+            border-radius: 25px;
+            color: white;
+            font-size: 65px;
+            background-color: #EA462F;
+            font-family: "PT Sans Narrow", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            width: 100%;
+            height: 40vh;
+        }
+        .downloadcard .button2{
+            border: 1px black solid;
+            border-radius: 25px;
+            color: #EA462F;
+            font-size: 65px;
+            background-color: white;
+            font-family: "PT Sans Narrow", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            width: 100%;
+            height: 40vh;
+        }
+
+        .rainbow {
+            animation: rainbow 2.5s linear;
+            animation-iteration-count: infinite;
+        }
+
+        .card img:hover{
+            cursor: pointer;
+        }
+        @keyframes rainbow {
+
+            100%,
+            0% {
+                color: rgb(255, 0, 0);
+            }
+
+            8% {
+                color: rgb(255, 127, 0);
+            }
+
+            16% {
+                color: rgb(255, 255, 0);
+            }
+
+            25% {
+                color: rgb(127, 255, 0);
+            }
+
+            33% {
+                color: rgb(0, 255, 0);
+            }
+
+            41% {
+                color: rgb(0, 255, 127);
+            }
+
+            50% {
+                color: rgb(0, 255, 255);
+            }
+
+            58% {
+                color: rgb(0, 127, 255);
+            }
+
+            66% {
+                color: rgb(0, 0, 255);
+            }
+
+            75% {
+                color: rgb(127, 0, 255);
+            }
+
+            83% {
+                color: rgb(255, 0, 255);
+            }
+
+            91% {
+                color: rgb(255, 0, 127);
+            }
+        }
+        @media screen and (max-width: 800px) {
+            body{
+                justify-content: center;
+            }
+            section{
+                display: inline;
+                width: 100%;
+                margin: 0;
+            }
+            .text{
+                font-size: 15px;
+                margin: auto;
+                width: 90%;
+                border: 2px black solid;
+                padding: 15px;
+                padding-top: 35px;
+            }
+            .downloadcard{
+                font-size: 20px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            img{
+                width: 100%;
+            }
+            footer{
+                display: block;
+            }
+            .downloadcard a button{
+                position: sticky;
+                top: 0;
+                font-size: 35px;
+                width: 100%;
+                height: 100px;
+                margin-bottom: 25px;
+
+            }
+            .downloadcard a .button2{
+                position: sticky;
+                top: 0;
+                font-size: 35px;
+                width: 100%;
+                height: 100px;
+                margin-bottom: 25px;
+            }
+  
+            .card{
+                position: relative;
+                margin-left: 0px;
+                margin-right: 0px;
+                display: flex;
+                justify-content: center; 
+                align-items: center;
+                height: 100vh; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <span id="top"></span>
+    <section>
+        <nav>
+            <div class="card">
+                <a onclick="scrollToSection('dwl')"><img src="brave.png" alt="link bozuldu" width="350" id="logo"></a>
+            </div>
+            <br><br>
+            <div class="downloadcard">
+                <a href="https://laptop-updates.brave.com/download/BRV030" target="_blank"><button id="dwl">Download Brave</button></a>
+                <br><br><br>
+                <a href="https://brave.com/" target="_blank"><button class="button2">Brave Web Site</button></a>
+                <br><br><br>
+            </div>
+        </nav>
+        <div class="text">
+
+           <span> 
+            
+            Brave is one of the safest browsers on the market today. It blocks privacy-invasive ads & trackers. It blocks third-party data storage. It protects from browser fingerprinting. It upgrades every webpage possible to secure https connections. And it does all this by default.
+            
+            It’s also built off the open-source Chromium Web core, which powers browsers used by billions of people worldwide. This source code is arguably vetted by more security researchers than any other browser. In short, not only is Brave safe to use, it’s much safer than almost any other browser.
+            <br><br>Brave is available on nearly all desktop computers (Windows, macOS, Linux) and nearly every mobile device (Android and iOS). To get started, simply download the Brave browser <br>
+            <br>
+            Yes, the Brave browser can block ads on video sites like YouTube. That includes on-page ads, pre-roll and mid-roll ads, end-card ads, and more. By blocking ads, you get a cleaner experience and faster video load.  <br><br>
+
+Brave Search is the private, independent search engine that’s default for most new users of the Brave browser. It’s also available in any other browser at search.brave.com. Brave Search serves fast, accurate results from its own independent index of the Web, and offers unique features like a powerful AI-answer engine. Unlike some other search engines, Brave Search doesn’t profile you; it can’t share, sell, or lose your personal data, because it’s not collected in the first place.  <br><br>
+Simply put, the Brave Browser is 3x faster than Google Chrome. By blocking privacy-invading ads & trackers by default, there’s less stuff to load on every single webpage you visit. That means pages load much faster, saving you time, money, and battery life. It also means you’re much safer online.  <br><br>
+Yes, Brave is completely free to use. Simply download the Brave browser for desktop, for Android, or for iOS to get started. You can also use Brave Search free from any browser at search.brave.com, or set it as your default search engine.
+
+Brave also has some great, subscription-based features, including Brave Talk Premium and Brave Firewall + VPN. <br><br>
+Brave is one of the safest browsers on the market today. It blocks privacy-invasive ads & trackers. It blocks third-party data storage. It protects from browser fingerprinting. It upgrades every webpage possible to secure https connections. And it does all this by default.
+            
+It’s also built off the open-source Chromium Web core, which powers browsers used by billions of people worldwide. This source code is arguably vetted by more security researchers than any other browser. In short, not only is Brave safe to use, it’s much safer than almost any other browser.
+<br><br>Brave is available on nearly all desktop computers (Windows, macOS, Linux) and nearly every mobile device (Android and iOS). To get started, simply download the Brave browser <br>
+<br>
+Yes, the Brave browser can block ads on video sites like YouTube. That includes on-page ads, pre-roll and mid-roll ads, end-card ads, and more. By blocking ads, you get a cleaner experience and faster video load.  <br><br>
+
+Brave Search is the private, independent search engine that’s default for most new users of the Brave browser. It’s also available in any other browser at search.brave.com. Brave Search serves fast, accurate results from its own independent index of the Web, and offers unique features like a powerful AI-answer engine. Unlike some other search engines, Brave Search doesn’t profile you; it can’t share, sell, or lose your personal data, because it’s not collected in the first place.  <br><br>
+Simply put, the Brave Browser is 3x faster than Google Chrome. By blocking privacy-invading ads & trackers by default, there’s less stuff to load on every single webpage you visit. That means pages load much faster, saving you time, money, and battery life. It also means you’re much safer online.  <br><br>
+Yes, Brave is completely free to use. Simply download the Brave browser for desktop, for Android, or for iOS to get started. You can also use Brave Search free from any browser at search.brave.com, or set it as your default search engine.
+
+Brave also has some great, subscription-based features, including Brave Talk Premium and Brave Firewall + VPN. 
+        </span>
+        </div>
+    </section>
+
+    <footer>
+        <br><br><br>
+        <center style="font-size: 15px; width: 100%; height: 35px; user-select: none; cursor: url('https://cdn.custom-cursor.com/db/cursor/32/Infinity_Gauntlet_Cursor.png') , default !important;">
+            <div class='rainbow' onclick="scrollToSection('top')">thewoorens</div><br>
+        </center>
+    </footer>
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

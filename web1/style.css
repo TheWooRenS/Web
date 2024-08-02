@@ -1,0 +1,252 @@
+
+body{
+    background-image: url("assets/background.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 92%;
+    margin: 0;
+    background-color: #F8F6F3;
+    user-select: none;
+    overflow: fixed;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    list-style-type: none;
+}
+.menu a{
+    color:#2B5FEF;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+.loginmenu:hover{
+    opacity: 52%;
+}
+.logo{
+    display: flex;
+
+}
+.topsection{
+    color: #2B5FEF;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding-top: 2%;
+
+}
+.topsection h1{
+    margin-left: 5px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.centersection h1{
+    margin: 5% 3% 0%;
+    color: #2B5FEF;
+    font-size: 400%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    width: 35%;
+}
+.centersection span{
+    margin: 5% 3% 0%;
+    color: #2B5FEF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    border: 1px #2B5FEF solid;
+    padding: 0.8% 2% 0.8% 2%;
+    width: 35%;
+    border-radius: 45px;
+    transition: 0.3s;
+}
+.centersection span:hover{
+    transition: 0.6s;
+    cursor: pointer;
+    background-color: #2B5FEF;
+    color:white;
+}
+.box1{
+    transition: 0.3s;
+    margin: 0% 3% 0%;
+    font-family: "Roboto", sans-serif;
+    width: 20%;
+    font-size: 120%;
+    color: #2B5FEF;
+    border: 1px #2B5FEF solid;
+    padding: 0% 1.4% 1.4% 1.4%;
+    border-radius: 25px;
+}
+.box1:hover{
+    transition: 0.6s;
+    transform: translateY(-15px);
+    margin-bottom: 1%;
+}
+.box1 button{
+    color: #2B5FEF;
+    border: none;
+    background-color: transparent;
+    width: 114%;
+    padding: 5%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: -7% -7% -7% -7%;
+    font-size: 110%;
+    text-align: left;
+}
+.box1 button:hover{
+    cursor: pointer;
+    background-color: #2B5FEF;
+    border-bottom: 14px #2B5FEF solid;
+    color: white;
+}
+        
+.boxs{
+
+    margin-top: 5%;
+    display: flex;
+    height: 100%;
+    min-height: max-content;
+    width: 100%;
+}
+
+.mobile{
+    margin: 5% 3% 0%;
+    color: #2B5FEF;
+    font-size: 200%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    width: 35%;
+    display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+    .boxs{
+        display: flex;
+    }
+    .box1{
+        width: 20%;
+    }
+  }
+
+  @media only screen and (max-width: 720px) {
+    section{
+        display: none;
+    }
+    .boxs{
+        display: none;
+    }
+    .topsection{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    body{
+        background-color: black;
+        background-image: none;
+    }
+    .mobile{
+        display: inline;
+    }
+  }
+
+
+.rainbow-bg{
+    animation: rainbow-bg 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+.rainbow{
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow-bg{
+    100%,0%{
+        background-color: rgb(255,0,0);
+    }
+    8%{
+        background-color: rgb(255,127,0);
+    }
+    16%{
+        background-color: rgb(255,255,0);
+    }
+    25%{
+        background-color: rgb(127,255,0);
+    }
+    33%{
+        background-color: rgb(0,255,0);
+    }
+    41%{
+        background-color: rgb(0,255,127);
+    }
+    50%{
+        background-color: rgb(0,255,255);
+    }
+    58%{
+        background-color: rgb(0,127,255);
+    }
+    66%{
+        background-color: rgb(0,0,255);
+    }
+    75%{
+        background-color: rgb(127,0,255);
+    }
+    83%{
+        background-color: rgb(255,0,255);
+    }
+    91%{
+        background-color: rgb(255,0,127);
+    }
+}
+
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}

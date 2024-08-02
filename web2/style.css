@@ -1,0 +1,262 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+}
+.topBar{
+    height: 20%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px gainsboro solid;
+}
+.topBar a{
+    transition: 0.3s;
+    text-decoration: none;
+    color: black;
+}
+.topBar a:hover{
+    color: #5DAE43;
+}
+.topBarR{
+    margin-right: 2%;
+}
+.topBarL{
+    margin-left: 0.6%;
+
+}
+.topBarR input{
+    font-style: italic;
+    font-size: 100%;
+    width: 280px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px black solid;
+}
+.topMenu{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px gainsboro solid;
+}
+.topMenu ul{
+    margin-top: 25px;
+    font-size: 105%;
+    font-weight: bold;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.topMenu ul li{
+    margin-right: 35px;
+}
+.topMenu ul li:hover{
+    cursor: pointer;
+}
+.topMenu .logo{
+    padding-top: 0.5%;
+    padding-right: 0.8%;
+    margin-left: 2%;
+    border-right: 1px gainsboro solid;
+}
+.topMenu .phone{
+    margin-left: 25%;
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px gainsboro solid;
+}
+.topMenu .phone a{
+    margin-top: 20px;
+    transition: 0.3s;
+    margin-left: 12px;
+    margin-right: 30px;
+    font-size: 160%;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+.topMenu .phone a:hover{
+    color: #5DAE43;
+}
+.topMenu .other{
+    margin-top: 0.5%;
+}
+button{
+    background-color: #5DAE43;
+    font-size: 95%;
+    color: white;
+    border: none;
+    padding: 23px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 200px;
+    margin-right: 25px;
+    margin-left: 25px;
+    background: linear-gradient(to left, rgb(93, 174, 101) 50%, black 50%) right;
+    background-size: 200%;
+    transition: .3s;
+    margin-bottom: 4%;
+}
+button:hover{
+    cursor: pointer;
+    background-position: left;
+}
+.whitebtn{
+    background-color: #5DAE43;
+    font-size: 95%;
+    color: #5DAE43;
+    border: none;
+    padding: 23px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 200px;
+    margin-right: 25px;
+    margin-left: 25px;
+    background: linear-gradient(to left, white 50%, rgb(93, 174, 101) 50%) right;
+    background-size: 200%;
+    transition: .3s;
+    margin-bottom: 4%;
+}
+.whitebtn:hover{
+    color: white;
+}
+
+.topMenu ul li ul{
+
+    position: absolute;
+    display: none;
+    margin-left: -40px;
+    background-color: white;
+    z-index: 1;
+}
+.topMenu ul li:hover{
+    transition: 0.3s ease-out;
+
+    color: #5DAE43;
+    border-bottom: 3px #5DAE43 solid;
+}
+.topMenu ul li:hover ul{
+    display: block;
+}
+.topMenu ul li a{
+    text-decoration: none;
+    background: #576F72;
+    display: block;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    border-bottom: 2px solid #E4DCCF;
+    border-left: 1px solid #F0EBE3;
+    padding: 5px;
+}
+.topMenu ul li ul li a{
+    background: #576F72;
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px solid #F0EBE3;
+    font-size: .8em;
+}
+.topMenu li a:hover{
+    background: #7D9D9C;
+    transition: 1s;
+}
+.topMenu ul li ul li a:hover{
+    padding-left: 15px;
+}
+    
+/* 1870 küçükse her şeyi gizle */
+@media only screen and (max-width: 1870px){
+    body{
+        display: none;
+    }
+}
+
+.rainbow-bg{
+    animation: rainbow-bg 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+.rainbow{
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow-bg{
+    100%,0%{
+        background-color: rgb(255,0,0);
+    }
+    8%{
+        background-color: rgb(255,127,0);
+    }
+    16%{
+        background-color: rgb(255,255,0);
+    }
+    25%{
+        background-color: rgb(127,255,0);
+    }
+    33%{
+        background-color: rgb(0,255,0);
+    }
+    41%{
+        background-color: rgb(0,255,127);
+    }
+    50%{
+        background-color: rgb(0,255,255);
+    }
+    58%{
+        background-color: rgb(0,127,255);
+    }
+    66%{
+        background-color: rgb(0,0,255);
+    }
+    75%{
+        background-color: rgb(127,0,255);
+    }
+    83%{
+        background-color: rgb(255,0,255);
+    }
+    91%{
+        background-color: rgb(255,0,127);
+    }
+}
+
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}

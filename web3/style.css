@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+}
+.sale{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 0.5%;
+}
+
+.menu{
+    display: flex;
+    border-bottom: 1px black solid;
+    width: 100%;
+}
+.menu .logo{
+    cursor: pointer;
+    justify-content: start;
+    align-items: start;
+    background-color: #D0ED3A;
+    padding: 0.8% 4% 0.8% 4%;
+    font-family: 'Open Sans';
+    font-size: 145%;
+    font-weight: 700;
+    border-right: 1px black solid;
+}
+.menu .buttons{
+    display: flex;
+    margin-left: 45%;
+}
+.menu .buttons button{
+    font-size: 105%;
+    transition: 1s;
+
+    padding-left: 30%;
+    padding-right: 30%;
+    background-color: transparent;
+    border: none;
+    border-right: 1px black solid;  
+}
+.menu .buttons button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: #D0ED3A;
+}
+.menu .login{
+    cursor: pointer;
+
+    margin-left: 10%;
+    margin-top: 14%;
+    display: flex;
+}
+.menu .login span{
+    padding-left: 30%;
+    font-family: 'Open Sans';
+    font-size: 105%;
+}
+.menu .login i{
+    padding-left: 30%;
+}
+.centermenu{
+    font-family: 'Open Sans';
+    font-size: 230%;
+    font-weight: bold;
+}
+.text-container {
+    font-size: 60%;
+    font-weight: 300;
+    font-family: 'Open Sans';
+    position: relative;
+    white-space: nowrap;
+}
+.text {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    animation: typing 8s steps(9999, end) forwards;
+}
+.text::before {
+    margin-left: -75px;
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100px;
+    background-color: #D0ED3A;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: reveal 1s forwards;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes reveal {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(4); }
+}
+.pictures{
+    display: flex;
+}
+.pictures  img {
+    object-fit: cover;
+}
+
+.left, .right {
+    margin-left: 1%;
+    width: 25%;
+    height: 50%;
+    height: 450px;
+}
+.center {
+    width: 45%;
+    height: 450px;
+
+    object-fit: cover;
+}
+.pictures:hover{
+    box-shadow: 5% black;
+}
