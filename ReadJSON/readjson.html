@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read JSON</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <input
+      autocomplete="off"
+      type="text"
+      maxlength="50"
+      id="json"
+      style="width: 85%; font-size: 16px"
+      placeholder="Github Kullanıcı Adı:"
+    /><br /><br />
+    <button id="readJSON">Json verileri Oku</button>
+    <div id="info">
+      <p id="githubName"></p>
+      <p id="userName"></p>
+      <p id="location"></p>
+      <a href="" id="githubUrl" style="text-decoration: none; color: black"></a
+      ><br /><br />
+      <span>Avatar: </span><br />
+      <img id="avatar" alt="" />
+    </div>
+  </body>
+</html>
+<script>
+  $("#info").hide();
+  $("#readJSON").click(function () {
+    console.clear();
+    $.getJSON(
+      "https://api.github.com/users/" + document.getElementById("json").value,
+      function (data) {
+        $("#githubName").text("Kullanıcı Adı: " + data.login);
+        $("#userName").text("Adı: " + data.name);
+        $("#githubUrl").attr("href", data.html_url);
+        $("#location").text("Ülke: "+ data.location);
+        $("#githubUrl").text("Github Profili: " + data.html_url);
+        $("#avatar").attr("src", data.avatar_url);
+        $("#info").toggle(900);
+        console.log(data);
+      }
+    );
+  });
+</script>
